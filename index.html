@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <!-- remix icon css cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/custom.css" />
+
+</head>
+<body>
+
+    <main class="register_main">
+
+        <center><h1 style="font-size: 14px;">Form Validation Using Javascript</h1></center>
+   
+
+        <form class="register" id="registrationForm" method="post">
+            <div class="register_input-elmt">
+                <label for="rfullname">Fullname</label>
+                <input type="text" id="rfullname" name="rfullname" placeholder="eg: Rohit" autocomplete="off" oninput="validateRFullName()" required>
+                <p class="error_msg" id="rfn_error-msg">Minimum 2 character and Maximum 60 character allowed, Special Char.. and Number not allowed!</p>
+            </div>
+            <div class="register_input-elmt">
+                <label for="rusername">Username</label>
+                <input type="text" id="rusername" name="rusername" placeholder="eg: rohit_123" autocomplete="off" oninput="validateRUserName()" required>
+                <p class="error_msg" id="run_error-msg">Minimum 1 character and Maximum 70 character allowed,only these @ - # _ $ special Char.. allowed, and Space not allowed!</p>
+            </div>
+            <div class="register_input-elmt">
+                <label for="remail">Email</label>
+                <input type="email" id="remail" name="remail" placeholder="eg: rohit@gmail.com" autocomplete="off" oninput="validateREmail()" required>
+                <p class="error_msg" id="reml_error-msg">Enter Valid Email !</p>
+            </div>
+            <div class="register_input-elmt">
+                <label for="rpassword">Password</label>
+                <div class="register_password">
+                    <input type="password" id="rpassword" name="rpassword" placeholder="eg: 12*&rapid" oninput="validateRPswd()" required>
+                    <i onclick="showRPassword()" class="ri-eye-line" id="registerp_eye-toggle"></i>
+                </div>
+                <p class="error_msg" id="rpswd_error-msg">Minimum 1 small,capital,digit and Special Character required, atleast 8 character overall required & 60 maximum character allowed,and no space allowed !!</p>
+            </div>
+            <div class="register_input-elmt">
+                <label for="rcpassword">Confirm Password</label>
+                <div class="register_password">
+                    <input type="password" id="rcpassword" name="rcpassword" placeholder="eg: 12*&rapid" oninput="validateRCPswd()" required>
+                    <i onclick="showRCPassword()" class="ri-eye-line" id="regustercp_eye-toggle"></i>
+                </div>
+                <p class="error_msg" id="rcpswd_error-msg">Passwords do not match !!</p>
+            </div>
+            <div class="register_input-elmt">
+                <button type="submit" name="rsubmit" onclick="submitData()">Register</button>
+            </div>  
+            <div class="register_input-elmt">
+                <p class="login_link"><span>Have an account ?&nbsp;&nbsp;&nbsp;</span><a href="login.php">Log in</a></p>
+            </div> 
+            
+        </form>
+    </main>
+
+
+    <footer>
+        <span>Designed & Created by </span><a href="https://github.com/sachincse54" target="_blank">Sachin Kumar</a>
+    </footer>
+
+   
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>
+
